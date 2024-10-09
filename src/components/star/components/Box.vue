@@ -52,20 +52,35 @@ export default {
 <style>
 .container {
   width: 100%;
+  height: 100%;
   transform-style: preserve-3d;
   perspective: 600px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  top:0px;
+
 }
 .soul-star-box {
-  position: relative;
+  /* position: relative;
   width: 300px;
   height: 300px;
   transition: 3s linear;
   transform-style: preserve-3d;
   transform:
-    translate3d(30px, 50px, 0px)
-    rotateX(40deg)
+    translate3d(0px, 0px, 0px)
+    rotateX(0deg)
     rotateY(0deg)
     rotateZ(0deg);
+  animation: revolution 20s linear 0s infinite;
+  border-radius: 20px;
+  bottom: 100px; */
+  position: absolute; /* 使用绝对定位 */
+  left: 40%; /* 将盒子左侧对齐到父元素的 50% */
+  transform: translate(-50%, -50%); /* 通过负的 translate 将盒子完全居中 */
+  width: 300px;
+  height: 300px;
+  transition: 3s linear;
+  transform-style: preserve-3d;
   animation: revolution 20s linear 0s infinite;
   border-radius: 20px;
 }
